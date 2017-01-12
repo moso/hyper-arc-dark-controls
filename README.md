@@ -12,7 +12,7 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 **Manually**:
 
 1. Open hyper's preferences with `Cmd+,` (or manually at `~/.hyperterm.js`) with your editor.
-2. Update your list of plugins to include hyperterm-arc-dark-controls, like so:
+2. Update your list of plugins to include hyper-arc-dark-controls, like so:
 
         plugins: [
             'hyper-arc-dark-controls'
