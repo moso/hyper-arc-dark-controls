@@ -26,7 +26,7 @@ plugins: [
 2. Reload (`Cmd+Shift+R`) or restart hyper and voila!
 
 
-## To Do
+### To Do
 
 - Convert the originally forked `<div>` with `<span>`'s inside it into a `<ul>` where the icons will reside as raw SVG inside `<li>`'s. This will allow better control with padding between `<li>`'s instead of positioning, aswell as the ability to have the correct hover background on the minimize and maximize icons. This will also give me the ability to adjust the color of the SVG with `fill` instead of having a colored SVG, which will give the plugin better compatibility.
 - While at it, create the `<ul>` so it'll be as easy as changing a class inside `index.js` to have the icons positioned on the left side like on OSX.
