@@ -5,6 +5,8 @@ A plugin that makes the close, minimize and maximize buttons look like the Arc D
 
 Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](https://github.com/krve/hyper-mac-controls) and modified by [@moso](https://github.com/moso).
 
+![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
+
 ### Install
 
 **Manually**:
