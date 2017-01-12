@@ -1,0 +1,22 @@
+{
+  "name": "hyper-arc-dark-controls",
+  "version": "1.0.0",
+  "description": "Pretty window controls from the Arc Dark theme for hyper",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moso/hyper-arc-dark-controls.git"
+  },
+  "keywords": [
+    "hyper",
+    "hyperterm",
+    "hyper-plugin",
+    "hyperterm-plugin",
+    "plugin",
+    "arc",
+    "arc dark",
+    "window controls"
+  ],
+  "author": "Morten Sørensen <morten@moso.io>",
+  "license": "MIT"
+}
