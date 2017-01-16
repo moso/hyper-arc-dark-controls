@@ -8,8 +8,11 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
 ### Changelog
+**1.1.2**
+- Small fix to adjust the height and width of the `li` with the maximize and minimize icons, to compensate for the added border.
+
 **1.1.1**
-- Small, unmentionable fixes
+- Small, unmentionable fixes regarding this README.
 
 **1.1.0**
 - Converted the originally forked `div` with `span`'s into an `ul` with inline `svg`'s residing inside its `li`'s. This allows for better control over the hover/active functions, and better control over the `fill`-property of the `svg`'s. While using `li`'s we also get past the ugliness of positioning each icon with `position: absolute`, and we now control the space between icons with margin instead. And we now also have the correct hover/active behaviour, since we now have the `background`-property on the `li`'s available aswell.

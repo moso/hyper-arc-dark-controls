@@ -67,6 +67,8 @@ exports.decorateConfig = (config) => {
                 mix-blend-mode: difference;
             }
             .arc_actions > li:not(.arc_close) {
+                width: 18px;
+                height: 18px;
                 border: 1px solid transparent;
             }
             .arc_actions > li:not(.arc_close):hover {
