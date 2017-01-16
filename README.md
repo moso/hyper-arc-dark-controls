@@ -7,29 +7,39 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
+### Changelog
+**1.1.0**
+- Converted the originally forked `div` with `span`'s into an `ul` with inline `svg`'s residing inside its `li`'s. This allows for better control over the hover/active functions, and better control over the `fill`-property of the `svg`'s. While using `li`'s we also get past the ugliness of positioning each icon with `position: absolute`, and we now control the space between icons with margin instead. And we now also have the correct hover/active behaviour, since we now have the `background`-property on the `li`'s available aswell.
+- The `svg`'s used are taking directly from the [Arc Theme](https://github.com/horst3180/arc-theme) repository. So all credit goes to [horst3180](https://github.com/horst3180). However, I've optimized them quite a bit by removing empty groups and useless InkScape/SodiPodi tags. It might even be worth a PR.
+- By inlining the `svg`'s, we can also get rid of the `/icons` folder aswell, as there's now no need for shipping the actual icons.
+
+**1.0.0**
+Initial release
+
 ### Install
 
 **Manually**:
 
-1. Open hyper's preferences with `Cmd+,` (or manually at `~/.hyperterm.js`) with your editor.
+1. Open hyper's preferences with `Ctrl+,` (or manually at `~/.hyper.js`) with your editor.
 2. Update your list of plugins to include hyper-arc-dark-controls, like so:
 
         plugins: [
             'hyper-arc-dark-controls'
         ],
 
-3. Reload (`Cmd+Shift+R`) or restart hyper and voila!
+3. Reload (`Ctrl+Shift+R`) or restart hyper and voila!
 
 **hpm**:
 
 1. Install using `hpm i hyper-arc-dark-controls`
-2. Reload (`Cmd+Shift+R`) or restart hyper and voila!
+2. Reload (`Ctrl+Shift+R`) or restart hyper and voila!
 
 
 ### To Do
 
-- Convert the originally forked `<div>` with `<span>`'s inside it into a `<ul>` where the icons will reside as raw SVG inside `<li>`'s. This will allow better control with padding between `<li>`'s instead of positioning, aswell as the ability to have the correct hover background on the minimize and maximize icons. This will also give me the ability to adjust the color of the SVG with `fill` instead of having a colored SVG, which will give the plugin better compatibility.
-- While at it, create the `<ul>` so it'll be as easy as changing a class inside `index.js` to have the icons positioned on the left side like on OSX.
+- Code optimization. Everything works, as of now. But it could be a lot cleaner.
+- Create a class for header so it'll be as easy as changing a class inside `index.js` to have the icons positioned on the left side like on OSX.
+- Create a check to see if the window is focused, and add a class if not, so the window controls will be "faded" like on real window controls.
 
 
 ### License

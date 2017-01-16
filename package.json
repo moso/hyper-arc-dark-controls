@@ -1,6 +1,6 @@
 {
   "name": "hyper-arc-dark-controls",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Pretty window controls from the Arc Dark theme for hyper",
   "main": "index.js",
   "repository": {
