@@ -8,13 +8,16 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
 ### Changelog
+**1.1.1**
+- Small, unmentionable fixes
+
 **1.1.0**
 - Converted the originally forked `div` with `span`'s into an `ul` with inline `svg`'s residing inside its `li`'s. This allows for better control over the hover/active functions, and better control over the `fill`-property of the `svg`'s. While using `li`'s we also get past the ugliness of positioning each icon with `position: absolute`, and we now control the space between icons with margin instead. And we now also have the correct hover/active behaviour, since we now have the `background`-property on the `li`'s available aswell.
 - The `svg`'s used are taking directly from the [Arc Theme](https://github.com/horst3180/arc-theme) repository. So all credit goes to [horst3180](https://github.com/horst3180). However, I've optimized them quite a bit by removing empty groups and useless InkScape/SodiPodi tags. It might even be worth a PR.
 - By inlining the `svg`'s, we can also get rid of the `/icons` folder aswell, as there's now no need for shipping the actual icons.
 
 **1.0.0**
-Initial release
+- Initial release
 
 ### Install
 
