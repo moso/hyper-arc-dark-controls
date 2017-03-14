@@ -52,6 +52,10 @@ exports.decorateConfig = (config) => {
             }
             .arc_actions > li.arc_close {
                 background-color: #cc575d;
+                height: 14px;
+                width: 14px;
+                position: relative;
+                top: 2px;
             }
             .arc_actions > li.arc_close:hover {
                 background-color: #d7787d;
@@ -65,6 +69,9 @@ exports.decorateConfig = (config) => {
             }
             .arc_actions > li.arc_close > svg {
                 mix-blend-mode: difference;
+                position: relative;
+                top: -2px;
+                left: -1px;
             }
             .arc_actions > li:not(.arc_close) {
                 width: 18px;

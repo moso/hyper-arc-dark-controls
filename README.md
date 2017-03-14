@@ -8,6 +8,10 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
 ### Changelog
+**1.1.3**
+- Applied a small fix to the close button after a hyper update skewered its position.
+- Also made the close button smaller to better mimic the original close button.
+
 **1.1.2**
 - Small fix to adjust the height and width of the `li` with the maximize and minimize icons, to compensate for the added border.
 
