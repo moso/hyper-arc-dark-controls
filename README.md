@@ -8,6 +8,12 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
 ### Changelog
+**1.1.4**
+- Adjusted the header hight to match the theme
+- Applied background color to the header to match the theme color
+- Adjusted some values to make the right areas show the background color
+- Adjusted the font and font-size of the window title
+
 **1.1.3**
 - Applied a small fix to the close button after a hyper update skewered its position.
 - Also made the close button smaller to better mimic the original close button.

@@ -16,20 +16,30 @@ exports.decorateConfig = (config) => {
             .header_windowHeader {
                 right: 94px;
                 width: calc(100% - 93px);
+                background-color: #2b2e37;
+                height: 26px;
             }
             .header_windowControls {
                 display: none;
             }
             .header_appTitle {
                 margin-right: -94px;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                color: #afb8c6;
             }
             .arc_header {
                 position: absolute;
+                top: 1px;
                 right: 0;
-                top: 7px;
                 width: 94px;
+                background-color: #2b2e37;
             }
             .arc_actions {
+                display: flex;
+                align-items: center;
+                height: 26px;
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
@@ -54,8 +64,6 @@ exports.decorateConfig = (config) => {
                 background-color: #cc575d;
                 height: 14px;
                 width: 14px;
-                position: relative;
-                top: 2px;
             }
             .arc_actions > li.arc_close:hover {
                 background-color: #d7787d;
