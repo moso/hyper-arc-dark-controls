@@ -8,7 +8,7 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
 ### Changelog
-**1.1.4**
+**1.1.4, 1.1.5**
 - Adjusted the header hight to match the theme
 - Applied background color to the header to match the theme color
 - Adjusted some values to make the right areas show the background color

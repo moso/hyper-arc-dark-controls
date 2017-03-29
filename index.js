@@ -16,7 +16,7 @@ exports.decorateConfig = (config) => {
             .header_windowHeader {
                 right: 94px;
                 width: calc(100% - 93px);
-                background-color: #2b2e37;
+                background-color: #2f343f;
                 height: 26px;
             }
             .header_windowControls {
@@ -34,7 +34,7 @@ exports.decorateConfig = (config) => {
                 top: 1px;
                 right: 0;
                 width: 94px;
-                background-color: #2b2e37;
+                background-color: #2f343f;
             }
             .arc_actions {
                 display: flex;
