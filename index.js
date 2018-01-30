@@ -19,6 +19,11 @@ exports.decorateConfig = (config) => {
                 background-color: #2f343f;
                 height: 26px;
             }
+            .header_windowHeader .header_hamburgerMenuLeft {
+                width: 40px;
+                height: 26px;
+                padding: 0 15px;
+            }
             .header_windowControls {
                 display: none;
             }
