@@ -13,9 +13,15 @@ exports.decorateConfig = (config) => {
     return Object.assign({}, config, {
         css: `
             ${config.css || ''}
+            .header_header {
+                display: flex;
+                flex-direction: column;
+                top: 1px !important;
+                right: 1px !important;
+                left: 1px !important;
+            }
             .header_windowHeader {
-                right: 94px;
-                width: calc(100% - 93px);
+                width: calc(100% - 89px);
                 background-color: #2f343f;
                 height: 26px;
             }
@@ -28,17 +34,15 @@ exports.decorateConfig = (config) => {
                 display: none;
             }
             .header_appTitle {
-                margin-right: -94px;
+                margin-left: 89px;
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
                 font-size: 14px;
                 font-weight: 700;
                 color: #afb8c6;
             }
             .arc_header {
-                position: absolute;
-                top: 1px;
-                right: 0;
-                width: 94px;
+                margin-left: auto;
+                width: 89px;
                 background-color: #2f343f;
             }
             .arc_actions {
@@ -50,17 +54,16 @@ exports.decorateConfig = (config) => {
                 list-style-type: none;
             }
             .arc_actions > li {
-                display: inline-block;
-                margin-right: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 14px;
                 height: 16px;
                 width: 16px;
                 border-radius: 50%;
             }
             .arc_actions > li:nth-of-type(2) {
-                margin-right: 17px;
-            }
-            .arc_actions > li:hover {
-                transition: all .25s ease;
+                margin-right: 16px;
             }
             .arc_actions > li:last-of-type {
                 margin-right: 0;
@@ -81,10 +84,10 @@ exports.decorateConfig = (config) => {
                 height: 16px;
             }
             .arc_actions > li.arc_close > svg {
+                position: absolute;
+                width: 16px;
+                height: 16px;
                 mix-blend-mode: difference;
-                position: relative;
-                top: -2px;
-                left: -1px;
             }
             .arc_actions > li:not(.arc_close) {
                 width: 18px;
