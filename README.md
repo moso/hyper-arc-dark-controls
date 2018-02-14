@@ -1,7 +1,7 @@
 # hyper-arc-dark-controls
 Pretty window controls from the Arc Dark theme for [hyper](https://github.com/zeit/hyper)
 
-A plugin that makes the close, minimize and maximize buttons look like the Arc Dark window controls. This plugin is tested in both linux and windows.
+A plugin that makes the close, minimize and maximize buttons look like the Arc Dark window controls. This plugin has been thoroughly tested in Ubuntu and Windows 10, and works with both `v1.4.8` (latest stable) and the `v2.0.0` canary versions.
 
 Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](https://github.com/krve/hyper-mac-controls) and modified by [@moso](https://github.com/moso).
 
@@ -11,7 +11,7 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 **1.1.7**
 - Fixed wrong window controls offset on default theme
 - Reworked flexbox for better positioning, meaning less `position: absolute`
-- Adjusted width and height on the `<li>`'s and the `svg` icons to match the Arc Dark theme
+- Adjusted width and height on both the `<li>`'s and the `svg` icons to match the Arc Dark theme
 
 **1.1.6**
 - Fixed hamburgerMenuLeft position issue
