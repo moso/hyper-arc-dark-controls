@@ -21,7 +21,7 @@ exports.decorateConfig = (config) => {
                 left: 1px !important;
             }
             .header_windowHeader {
-                width: calc(100% - 89px);
+                width: calc(100% - 91px);
                 background-color: #2f343f;
                 height: 26px;
             }
