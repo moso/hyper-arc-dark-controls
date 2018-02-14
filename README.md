@@ -8,6 +8,11 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
 ### Changelog
+**1.1.7**
+- Fixed wrong window controls offset on default theme
+- Reworked flexbox for better positioning, meaning less `position: absolute`
+- Adjusted width and height on the `<li>`'s and the `svg` icons to match the Arc Dark theme
+
 **1.1.6**
 - Fixed hamburgerMenuLeft position issue
 
