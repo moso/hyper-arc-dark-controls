@@ -7,7 +7,19 @@ Originally forked from [@krve](https://github.com/krve)'s [hyper-mac-controls](h
 
 ![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
 
+
+### Note
+
+This plugin is designed to work perfectly with the `hyperterm-atom-dark`-theme.
+While it also integrates fine with vanilla-themed hyper, I cannot take every theme and plugin into account.
+If the plugin doesn't look great on `xyz`-theme, then please do create an issue and I will look into it. But since I don't own a Mac, I cannot test the plugin on every OS, although it's been tested on Linux and Windows 10 which is what I have available.
+
+
 ### Changelog
+**1.1.8**
+- Fixed positioning of the window controls when tabs are active
+- Fixed tabs width while using flexbox
+
 **1.1.7**
 - Fixed wrong window controls offset on default theme
 - Reworked flexbox for better positioning, meaning less `position: absolute`
