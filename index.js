@@ -15,20 +15,24 @@ exports.decorateConfig = (config) => {
             ${config.css || ''}
             .header_header {
                 display: flex;
-                flex-direction: column;
                 top: 1px !important;
                 right: 1px !important;
                 left: 1px !important;
             }
             .header_windowHeader {
-                width: calc(100% - 91px);
+                width: calc(100% - 89px);
                 background-color: #2f343f;
                 height: 26px;
+                border: 0 !important;
             }
             .header_windowHeader .header_hamburgerMenuLeft {
                 width: 40px;
                 height: 26px;
                 padding: 0 15px;
+            }
+            .tabs_nav {
+                width: 100%;
+                top: 26px;
             }
             .header_windowControls {
                 display: none;
@@ -41,8 +45,10 @@ exports.decorateConfig = (config) => {
                 color: #afb8c6;
             }
             .arc_header {
-                margin-left: auto;
+                position: absolute;
+                right: 0;
                 width: 89px;
+                height: 26px;
                 background-color: #2f343f;
             }
             .arc_actions {
