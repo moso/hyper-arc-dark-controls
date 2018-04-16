@@ -10,51 +10,230 @@ if (isWin == true) {
 }
 
 exports.decorateConfig = (config) => {
+    const controlLeft = config.showWindowControls;
+
+    const arcDarkConfig = {
+        height: '26px',
+        headerBg: '#2f343f',
+        marginWidth: '88px',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+        iconSize: '16px',
+        closeBg: '#cc575d',
+        closeBgHover: '#d7787d',
+        closeBgActive: '#be3841',
+        blueColor: 'rgba(82,148,226,1)',
+        borderColor: '#000'
+    }
+
+    if(controlLeft == 'left') {
+        return Object.assign({}, config, {
+            css: `
+                ${config.css || ''}
+                .hyper_main {
+                    border: 1px solid ${arcDarkConfig.borderColor} !important;
+                }
+                .header_header {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    top: 1px !important;
+                    left: 1px !important;
+                    right: 1px !important;
+                }
+                .header_windowHeader {
+                    width: calc(100% - ${arcDarkConfig.marginWidth});
+                    height: ${arcDarkConfig.height};
+                    margin-left: calc(${arcDarkConfig.marginWidth} - 2px);
+                    background-color: ${arcDarkConfig.headerBg};
+                    border: 0 !important;
+                }
+                .header_windowHeader .header_hamburgerMenuLeft,
+                .header_windowHeader .header_hamburgerMenuRight {
+                    width: 40px;
+                    height: ${arcDarkConfig.height};
+                    padding: 0 15px;
+                }
+                .tabs_nav {
+                    width: 100%;
+                    top: ${arcDarkConfig.height};
+                }
+                .header_windowControls {
+                    display: none;
+                }
+                .header_appTitle {
+                    margin-left: -${arcDarkConfig.marginWidth};
+                    font-family: ${arcDarkConfig.fontFamily};
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+                .arc_header {
+                    position: absolute;
+                    right: auto !important;
+                    left: 0 !important;
+                    width: ${arcDarkConfig.marginWidth};
+                    height: ${arcDarkConfig.height};
+                    padding-right: 0 !important;
+                    padding-left: 8px !important;
+                    background-color: ${arcDarkConfig.headerBg};
+                }
+                .arc_actions {
+                    display: flex;
+                    flex-direction: row-reverse !important;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: ${arcDarkConfig.height};
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+                .arc_actions > li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+                .arc_actions > li.arc_close {
+                    background-color: ${arcDarkConfig.closeBg};
+                    width: calc(${arcDarkConfig.iconSize} - 2px);
+                    height: calc(${arcDarkConfig.iconSize} - 2px);
+                }
+                .arc_actions > li.arc_close:hover {
+                    background-color: ${arcDarkConfig.closeBgHover};
+                }
+                .arc_actions > li.arc_close:active {
+                    background-color: ${arcDarkConfig.closeBgActive};
+                }
+                .arc_actions > li > svg {
+                    width: ${arcDarkConfig.iconSize};
+                    height: ${arcDarkConfig.iconSize};
+                }
+                .arc_actions > li.arc_close > svg {
+                    position: absolute;
+                    width: ${arcDarkConfig.iconSize};
+                    height: ${arcDarkConfig.iconSize};
+                    mix-blend-mode: difference;
+                }
+                .arc_actions > li:not(.arc_close) {
+                    width: calc(${arcDarkConfig.iconSize} + 2px);
+                    height: calc(${arcDarkConfig.iconSize} + 2px);
+                    border: 1px solid transparent;
+                }
+                .arc_actions > li:not(.arc_close):hover {
+                    background-color: rgba(128,128,128,.25);
+                    border: 1px solid rgba(0,0,0,1);
+                }
+                .arc_actions > li:not(.arc_close):hover > svg path,
+                .arc_actions > li:not(.arc_close):active > svg path {
+                    fill: #fff !important;
+                }
+                .arc_actions > li:not(.arc_close):active {
+                    background-color: ${arcDarkConfig.blueColor};
+                    border: 1px solid rgba(0,0,0,1);
+                }
+            `
+        })
+    }
+
+    if(controlLeft == false) {
+        return Object.assign({}, config, {
+            css: `
+                ${config.css || ''}
+                .hyper_main {
+                    border: 1px solid ${arcDarkConfig.borderColor} !important;
+                }
+                .header_header {
+                    display: flex;
+                    top: 1px !important;
+                    left: 1px !important;
+                    right: 1px !important;
+                }
+                .header_windowHeader {
+                    width: 100%;
+                    height: ${arcDarkConfig.height};
+                    background-color: ${arcDarkConfig.headerBG};
+                    border: 0 !important;
+                }
+                .header_windowHeader .header_hamburgerMenuLeft,
+                .header_windowHeader .header_hamburgerMenuRight {
+                    width: 40px;
+                    height: ${arcDarkConfig.height};
+                    padding: 0 15px;
+                }
+                .tabs_nav {
+                    width: 100%;
+                    top: ${arcDarkConfig.height};
+                }
+                .header_windowControls {
+                    display: none;
+                }
+                .header_appTitle {
+                    font-family: ${arcDarkConfig.fontFamily};
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #fff;.header_windowHeader .header_hamburgerMenuLeft,
+                }
+                .arc_header {
+                    position: absolute;
+                    top: -1000%;
+                    display: none;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            `
+        })
+    }
+
     return Object.assign({}, config, {
         css: `
             ${config.css || ''}
+            .hyper_main {
+                border: 1px solid ${arcDarkConfig.borderColor} !important;
+            }
             .header_header {
                 display: flex;
                 top: 1px !important;
-                right: 1px !important;
                 left: 1px !important;
+                right: 1px !important;
             }
             .header_windowHeader {
-                width: calc(100% - 89px);
-                background-color: #2f343f;
-                height: 26px;
+                width: calc(100% - ${arcDarkConfig.marginWidth});
+                height: ${arcDarkConfig.height};
+                background-color: ${arcDarkConfig.headerBg};
                 border: 0 !important;
             }
-            .header_windowHeader .header_hamburgerMenuLeft {
+            .header_windowHeader .header_hamburgerMenuLeft,
+            .header_windowHeader .header_hamburgerMenuRight {
                 width: 40px;
-                height: 26px;
+                height: ${arcDarkConfig.height};
                 padding: 0 15px;
             }
             .tabs_nav {
                 width: 100%;
-                top: 26px;
+                top: ${arcDarkConfig.height};
             }
             .header_windowControls {
                 display: none;
             }
             .header_appTitle {
-                margin-left: 89px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                margin-left: ${arcDarkConfig.marginWidth};
+                font-family: ${arcDarkConfig.fontFamily};
                 font-size: 14px;
                 font-weight: 700;
-                color: #afb8c6;
+                color: #fff;
             }
             .arc_header {
                 position: absolute;
                 right: 0;
-                width: 89px;
-                height: 26px;
-                background-color: #2f343f;
+                width: ${arcDarkConfig.marginWidth};
+                height: ${arcDarkConfig.height};
+                padding-right: 8px !important;
+                background-color: ${arcDarkConfig.headerBg};
             }
             .arc_actions {
                 display: flex;
                 align-items: center;
-                height: 26px;
+                justify-content: space-between;
+                height: ${arcDarkConfig.height};
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
@@ -63,41 +242,32 @@ exports.decorateConfig = (config) => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-right: 14px;
-                height: 16px;
-                width: 16px;
                 border-radius: 50%;
             }
-            .arc_actions > li:nth-of-type(2) {
-                margin-right: 16px;
-            }
-            .arc_actions > li:last-of-type {
-                margin-right: 0;
-            }
             .arc_actions > li.arc_close {
-                background-color: #cc575d;
-                height: 14px;
-                width: 14px;
+                background-color: ${arcDarkConfig.closeBg};
+                width: calc(${arcDarkConfig.iconSize} - 2px);
+                height: calc(${arcDarkConfig.iconSize} - 2px);
             }
             .arc_actions > li.arc_close:hover {
-                background-color: #d7787d;
+                background-color: ${arcDarkConfig.closeBgHover};
             }
             .arc_actions > li.arc_close:active {
-                background-color: #be3841;
+                background-color: ${arcDarkConfig.closeBgActive};
             }
             .arc_actions > li > svg {
-                width: 16px;
-                height: 16px;
+                width: ${arcDarkConfig.iconSize};
+                height: ${arcDarkConfig.iconSize};
             }
             .arc_actions > li.arc_close > svg {
                 position: absolute;
-                width: 16px;
-                height: 16px;
+                width: ${arcDarkConfig.iconSize};
+                height: ${arcDarkConfig.iconSize};
                 mix-blend-mode: difference;
             }
             .arc_actions > li:not(.arc_close) {
-                width: 18px;
-                height: 18px;
+                width: calc(${arcDarkConfig.iconSize} + 2px);
+                height: calc(${arcDarkConfig.iconSize} + 2px);
                 border: 1px solid transparent;
             }
             .arc_actions > li:not(.arc_close):hover {
@@ -109,7 +279,7 @@ exports.decorateConfig = (config) => {
                 fill: #fff !important;
             }
             .arc_actions > li:not(.arc_close):active {
-                background-color: rgba(82,148,226,1);
+                background-color: ${arcDarkConfig.blueColor};
                 border: 1px solid rgba(0,0,0,1);
             }
         `
@@ -120,21 +290,26 @@ exports.decorateHeader = (Hyper, { React }) => {
     return class extends React.Component {
         constructor(props) {
             super(props);
+
             this.state = {
                 window: null,
                 maximized: false
             }
+
             this.closeApp = this.closeApp.bind(this);
             this.minimizeApp = this.minimizeApp.bind(this);
             this.maximizeApp = this.maximizeApp.bind(this);
         }
+
         closeApp() {
             this.state.window.close();
         }
+
         minimizeApp() {
             this.state.window.minimize();
             this.state.maximized = false;
         }
+
         maximizeApp() {
             if (this.state.maximized == true) {
                 this.state.window.unmaximize();
@@ -144,6 +319,7 @@ exports.decorateHeader = (Hyper, { React }) => {
                 this.state.maximized = true;
             }
         }
+
         render() {
             return (
                 React.createElement(Hyper, Object.assign({}, this.props, {
@@ -159,6 +335,7 @@ exports.decorateHeader = (Hyper, { React }) => {
                                     )
                                 )
                             ),
+
                             React.createElement('li', { onClick: this.maximizeApp },
                                 React.createElement('svg', { viewBox: '0 0 16 16' },
                                     React.createElement('g', { id: 'arc_max-button', transform: 'translate(-616,185.63782)' },
@@ -169,6 +346,7 @@ exports.decorateHeader = (Hyper, { React }) => {
                                     )
                                 )
                             ),
+
                             React.createElement('li', { className: 'arc_close', onClick: this.closeApp },
                                 React.createElement('svg', { viewBox: '0 0 16 16' },
                                     React.createElement('g', { id: 'arc_close-button', transform: 'translate(-645,185.63782)' },
@@ -192,6 +370,7 @@ exports.decorateHeader = (Hyper, { React }) => {
                 }))
             )
         }
+
         componentDidMount() {
             this.state.window = remote.getCurrentWindow();
         }
