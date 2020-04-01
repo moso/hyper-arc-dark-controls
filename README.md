@@ -28,7 +28,7 @@ If the plugin doesn't look great on `xyz`-theme, then please do create an issue 
 **1.1.7**
 - Fixed wrong window controls offset on default theme
 - Reworked flexbox for better positioning, meaning less `position: absolute`
-- Adjusted width and height on both the `<li>`'s and the `svg` icons to match the Arc Dark theme!
+- Adjusted width and height on both the `<li>`'s and the `svg` icons to match the Arc Dark theme
 
 **1.1.6**
 - Fixed hamburgerMenuLeft position issue
