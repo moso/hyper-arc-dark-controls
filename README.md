@@ -5,7 +5,7 @@ A plugin that makes the close, minimize, and maximize buttons look like the [Arc
 
 Based on the original [Arc theme](https://github.com/horst3180/arc-theme) source, this plugin aims to match the theme as much as possible. You're ~welcome~ encouraged to fork this project and modify it if you need to tinker with the colors, or create a PR if I missed something that needs fixing.
 
-![screenshot](https://dev.moso.io/hyper/hyper-arc-dark-controls/screenshot.png)
+![screenshot](https://hyperthemes.matthi.coffee/hyper/hyper-arc-dark-controls/2x.jpg)
 
 
 ### Note
